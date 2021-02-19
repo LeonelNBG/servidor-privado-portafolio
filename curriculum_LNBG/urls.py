@@ -23,7 +23,7 @@ urlpatterns = [
     path('administrador/', include('administrador.urls')),
     path('lienzo/', include('lienzo.urls')),
     path('indice/', include('indice.urls')),
-    path('/', include('indice.urls')),
+    path('', include('indice.urls')),
     path('admin/', admin.site.urls),
 ]
 
