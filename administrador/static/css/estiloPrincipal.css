@@ -1,0 +1,293 @@
+
+:root{
+
+    all:unset;
+
+    --color_texto: rgb(183, 248, 248);
+    --color_titulo: rgb(141, 33, 141);
+    --color_fondo_1: rgba(0, 50, 150, 0.8);
+    --color_fondo_2: rgba(41, 39, 39, 0.7);
+    --color_fondo_3: rgba(63, 13, 63, 0.7);
+
+}
+
+
+body{
+
+    background-image: url("../imagenes/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+    color: var(--color_texto);
+
+    padding: 1%;
+
+}
+
+.barra{
+
+    display: block;
+    margin: auto;
+
+    position: relative;
+
+    margin-top: 1%;
+
+    padding: 10px;
+
+    border: 2px solid #222121;
+
+    background-color: var(--color_fondo_3);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+}
+
+.seccion{
+
+    text-decoration: none;
+
+    display:block;
+
+    margin-left: 10%;
+    margin-right: 0%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    float: left;
+
+    background-color: var(--color_fondo_1);
+
+    height: 100%;
+    width: 250px;
+
+    text-align: center;
+    font-size: 250%;
+
+    color: var(--color_texto);
+
+    box-shadow: 4px 4px #000;
+
+    border-radius: 3px;
+
+
+}
+
+.seccion:hover{
+
+    text-decoration: none;
+
+    display: block;
+
+    margin-left: 10%;
+    margin-right: 0%;
+    margin-top: 8px;
+    margin-bottom: 2px;
+
+    float: left;
+
+    background-color: var(--color_titulo);
+
+    height: 100%;
+    width: 250px;
+
+    text-align: center;
+    text-shadow: 5px 5px 10px #000;
+    font-size: 250%;
+
+    color: var(--color_texto);
+
+    box-shadow: -2px -2px #000;
+
+
+    }
+
+.logo{
+
+    display:block;
+    margin:auto;
+
+    height: 150px;
+    width: 150px;
+
+    background-image: url("../imagenes/logo.jpg");
+
+    background-position: center;
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 40px 10px var(--color_titulo);
+
+}
+
+.logo:hover{
+
+    display:block;
+    margin:auto;
+
+    height: 150px;
+    width: 150px;
+
+    background-image: url("../imagenes/logo.jpg");
+
+    background-position: center;
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 40px 25px var(--color_titulo);
+
+    transform: rotate(-4deg);
+
+    }
+
+.textos{
+
+    display:block;
+    margin:auto;
+
+    padding: 10px;
+
+    width: 90%;
+
+    background-image: url("../imagenes/fondo_texto.png");
+
+    background-position: center;
+
+    background-repeat: repeat-y;
+
+}
+
+::selection{
+
+    color: var(--color_titulo);
+    background-color: var(--color_texto);
+
+}
+
+
+.titulo{
+
+    display:block;
+    margin:auto;
+
+    padding: 1%;
+
+    width: 100%;
+
+    margin-bottom: 1%;
+
+    background-color: var(--color_fondo_2);
+
+    color: var(--color_titulo);
+
+    text-shadow: 5px 5px 5px var(--color_fondo_1);
+
+    text-align: center;
+
+    font-size: 250%;
+
+    border-radius: 10px;
+
+}
+
+.subtitulo{
+
+    display:block;
+    margin:auto;
+
+    width: 90%;
+
+    color: var(--color_texto);
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+    text-align: center;
+
+    font-size: 200%;
+
+}
+
+.posteo{
+
+    display:block;
+    margin-left: 0%;
+
+    padding: 1%;
+
+    width: 75%;
+
+    background-color: var(--color_fondo_2);
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+    text-align: left;
+
+    font-size: 100%;
+
+    overflow: auto;
+
+
+}
+
+
+.imagen{
+
+    padding: 1%;
+
+    height: 50%;
+    width: 50%;
+
+    float: left;
+
+    border: 1px solid var(--color_fondo_3);
+
+
+}
+
+.imagen_central{
+
+    padding: 1%;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    height: 90%;
+    width: 90%;
+
+    display:block;
+    margin:auto;
+
+    border: 1px solid var(--color_fondo_3);
+
+}
+
+.aviso{
+
+    position: absolute;
+
+    margin-left: 68%;
+
+    padding: 0.25%;
+
+    width: 20%;
+
+    background-color: var(--color_fondo_3);
+
+    border: 1px solid var(--color_texto);
+
+    float: left;
+
+    text-align: left;
+    font-size: 90%;
+
+}

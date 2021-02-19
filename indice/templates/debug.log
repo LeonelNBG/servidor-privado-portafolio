@@ -1,0 +1,18 @@
+[1010/192240.330:ERROR:process_info.cc(359)] UncheckedAllocate
+[1010/192240.828:ERROR:process_info.cc(359)] UncheckedAllocate
+[1010/192240.977:ERROR:process_info.cc(359)] UncheckedAllocate
+[1010/193754.374:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.551:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.551:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.552:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.552:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.552:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.552:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1010/193754.553:ERROR:exception_snapshot_win.cc(99)] thread ID 10472 not found in process
+[1010/193757.248:ERROR:process_info.cc(359)] UncheckedAllocate
+[1010/204121.510:ERROR:process_info.cc(359)] UncheckedAllocate
+[1010/204121.510:ERROR:process_info.cc(359)] UncheckedAllocate
+[1116/223447.682:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1224/225023.391:ERROR:process_info.cc(359)] UncheckedAllocate
+[1224/225026.862:ERROR:process_info.cc(359)] UncheckedAllocate
+[1224/230038.754:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)

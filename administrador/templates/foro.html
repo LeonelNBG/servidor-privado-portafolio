@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01 GAMES</title>
+
+        <link rel="stylesheet" href="../static/css/estiloPrincipal.css" />
+        <link rel="stylesheet" href="../static/css/estiloForo.css" />
+
+    </head>
+
+    <body>
+
+        <a href="index"><div class="logo"></div></a>
+        
+        <div class="barra">
+
+            <a href="comunidad" class="seccion"> Comunidad </a>
+            <a href="index" class="seccion"> Noticias </a>
+            <a href="foro" class="seccion"> Foro </a>
+
+        </div>
+
+        <div class="textos">
+
+            <div class="titulo">
+
+                <strong> Foro </strong>
+
+            </div>
+
+            <br />
+
+            <div class="chat">
+
+                <br />
+
+                <div class="dialogos">
+
+                    {% for c in comentarios %}
+
+                    <br />
+
+                    <div class="comentario">
+
+                        -- {{ c.autor }} --
+
+                        <br />
+
+                        ( {{ c.fecha }} )
+                        
+                        <br />
+                        
+                        {{ c.contenido }}
+
+                        <br />
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <form name="chat" method="POST" action="enviar_mensaje_foro">
+                    {% csrf_token %}
+
+                    <p class="parrafo">
+
+                        Comentando acualmente como:
+                        
+                        <input type="text" name="autor" value="Anonimo" />
+    
+                    </p>
+    
+                    <input type="text" name="mensaje" class="input_text"/>
+    
+                    <input type="submit" value= "Enviar" class="submit" />
+    
+                </form>
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>

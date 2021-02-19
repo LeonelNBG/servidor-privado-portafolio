@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01 GAMES</title>
+
+        <link rel="stylesheet" type="text/css" href="../static/css/estiloPrincipal.css" />
+
+    </head>
+
+    <body>
+
+        <a href="index" class="logo"> <div class="logo"> </div> </a>
+
+        <div class="barra">
+
+            <a href="comunidad" class="seccion"> Comunidad </a>
+            <a href="index" class="seccion"> Noticias </a>
+            <a href="foro" class="seccion"> Foro </a>
+
+        </div>
+
+        <div class="textos">
+
+            <div class="titulo">
+
+                <strong> Noticias </strong>
+
+            </div>
+
+            {% for v in datos %}
+
+                {% if v.nota != "" and v.titulo_nota != "" %}
+
+                    <div class="aviso">
+
+                        <strong>{{v.titulo_nota}}</strong><br />
+                        <p>{{v.nota}}</p>
+
+                    </div>
+
+                {% endif %}
+
+                <div class="posteo">
+
+                    <p class="subtitulo">
+                        
+                        {{v.titulo}}
+                    
+                    </p>
+
+                    <p style="text-align: center;">
+
+                        {{v.fecha}}
+
+                    </p>
+
+                    <div style="display: block; ">
+
+                        {% if v.img != "" %}
+                        
+                            <img src = '../static/imagenes/descargado/{{v.img}}' class = 'imagen'></img>
+
+                        {% endif %}
+
+                        <p>
+
+                            {{v.contenido}}
+            
+                        </p>
+
+                    </div>
+
+                    <br />
+
+                    <p>
+
+                        - {{v.autor}}
+
+                    </p>
+
+                </div>
+
+                <br />
+
+            {% endfor %}
+
+        </div>
+
+        
+
+    </body>
+
+</html>

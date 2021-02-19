@@ -1,0 +1,208 @@
+:root {
+    margin: 0%;
+    padding: 0%;
+    --fondo: aliceblue;
+    --radio: 100px;
+    --menuX: 720px;
+    --menuY: 620px;
+    --tamaño: 10px;
+    --ancho: 0px;
+    --animacion1: none;
+    --animacion2: none;
+    --mostrar: none;
+    --movX: 1500px;
+    --movY: 550px;
+    --mouseX: 1px;
+    --mouseY: 1px;
+    --imagen: url("../imagenes/pen.png");
+}
+
+@keyframes expandir1{
+    0%{width: 0px;}
+    100%{width: var(--ancho);}
+
+}
+
+@keyframes contraer1{
+
+    0%{width: 400px;}
+    100%{width: var(--ancho);}
+
+}
+
+@keyframes expandir2{
+    0%{width: 0px; left: calc(var(--menuX) + var(--radio)/2);}
+    100%{width: var(--ancho); left: calc(var(--menuX) + var(--radio)/2 - var(--ancho));}
+
+}
+
+@keyframes contraer2{
+
+    0%{width: 400px; left: calc(var(--menuX) - 400px + var(--radio)/2);}
+    100%{width: 5px; left: calc(var(--menuX) + var(--radio)/2);}
+
+}
+
+body{
+
+    background-color: var(--fondo);
+
+    margin: 0px;
+    padding: 0px;
+
+    text-align: center;
+
+    user-select: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.encabezado{
+
+    position: absolute;
+
+    display: block;
+
+    width: 40%;
+
+    left: 30%;
+
+    clip-path: polygon(0% 0%, 25% 100%, 75% 100%, 100% 0%);
+
+    background-image: linear-gradient(to bottom, rgb(73, 52, 255), rgba(73, 52, 255,0.5));
+
+}
+
+.Menu{
+
+    position: fixed;
+
+    left: var(--menuX);
+    Top: var(--menuY);
+
+    width: var(--radio);
+    height: var(--radio);
+
+    clip-path: polygon(25% 0%, 0% 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0%);
+
+    text-align: center;
+
+    background-color: rgba(135, 50, 255, 0.6);
+
+    color: white;
+
+}
+
+.Menu .text{
+
+margin-top: 40%;
+
+}
+
+.Menu:hover::after{
+
+    content: "arrastrable";
+
+}
+
+
+
+.Menu_derecha{
+
+    display: var(--mostrar);
+
+    position: fixed;
+
+    left: calc(var(--menuX) + var(--radio)/2);
+    Top: calc(var(--menuY) + 15px);
+
+    width: var(--ancho);
+    height: calc(3*var(--radio)/4);
+
+    border-top-right-radius: calc(3*var(--radio)/4);
+    border-bottom-right-radius: calc(3*var(--radio)/4);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(128, 128, 128, 0.5));
+
+    animation-name: var(--animacion1);
+
+    animation-duration: 1s;
+
+    overflow: hidden;
+
+}
+
+.Menu_izquierda{
+
+    display: var(--mostrar);
+
+    position: fixed;
+
+    left: calc(var(--menuX) - var(--ancho) + var(--radio)/2);
+    Top: calc(var(--menuY) + 15px);
+
+    width: var(--ancho);
+    height: calc(3*var(--radio)/4);
+
+    border-top-left-radius: calc(3*var(--radio)/4);
+    border-bottom-left-radius: calc(3*var(--radio)/4);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(128, 128, 128, 0.5));
+
+    animation-name: var(--animacion2);
+
+    animation-duration: 1s;
+
+    overflow: hidden;
+
+
+}
+
+.boton{
+
+    border-radius: 15%;
+    background-color: rgba(237, 163, 25, 0.5);
+
+    width: calc(var(--ancho)/4);
+
+}
+
+.botonDescarga {
+
+    border-radius: 15%;
+    background-color: rgba(237, 163, 25, 0.5);
+
+}
+
+.rango{
+
+    width: calc(var(--ancho)/4);
+
+}
+
+.muestra{
+
+    width: calc(var(--ancho)/4);
+
+}
+
+#movimiento {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: calc(var(--movX) - 25px);
+    top: calc(var(--movY) - 25px);
+    background-image: url("../imagenes/movimientos.png");
+    background-size: cover;
+}
+
+#mouse {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: calc(var(--mouseX));
+    top: calc(var(--mouseY) + 75px);
+    background-image: var(--imagen);
+    background-size: cover;
+}

@@ -1,0 +1,448 @@
+:root{
+
+    --carga: 0%
+
+}
+
+@keyframes cambiaColor {
+
+    0% { color: gold; }
+
+    20% { color: orange; }
+    
+    40% { color: gold; }
+
+    60% { color: cornflowerblue; }
+
+    80% { color: cadetblue; }
+    
+    100% { color: cornflowerblue; }
+
+}
+
+mark{
+
+    background-color: lightgray;
+
+}
+
+:root{
+
+    all:unset;
+    margin: unset;
+    padding: unset;
+
+
+    --colorfondo_1: rgba(46, 110, 214, 0.5);
+
+    --colortitulo: rgba(0, 66, 172, 0.5);
+    --colorsubtitulo: rgba(71, 129, 223, 0.842);
+
+    --ancho: unset; 
+
+}
+
+::selection{
+
+    background-color: cornflowerblue;
+
+}
+
+::-webkit-scrollbar{
+
+    width: 1.5vw;
+    border: 1px solid black;
+    background-color: transparent;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background-color: var(--colorfondo_1);
+
+}
+
+body{
+
+    all:unset;
+    margin: unset;
+    padding: unset;
+
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.5vh;
+
+    background-image: url(../imagenes/FA.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.encabezado{
+	
+	float: right;
+
+    width: 45%;
+    margin-top: 10%;
+	
+	background-color:rgba(50,50,90,0.5);
+
+}
+
+.barrido{
+	
+	float: left;
+    display: block;
+    width: 100%;
+    height: 15vh;
+    background-image: linear-gradient( rgba(255,255,255,0), rgba(255,255,255,1));
+
+    margin-top: 12vh;
+}
+
+.titulo{
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    text-align: center;
+
+    margin-top: 8vh;
+
+    font-size: 8vw;
+
+    color: var(--colortitulo);
+
+    animation-name: cambiaColor;
+
+    animation-duration: 3s;
+
+    animation-iteration-count: infinite;
+
+}
+
+.subtitulo{
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    text-align: center;
+
+    font-size: 3vw;
+
+    color: white;
+	
+
+}
+
+.encabezado .subtitulo:hover {
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    text-align: center;
+
+    text-shadow: 1px 1px 15px white;
+
+    font-size: 3vw;
+
+    color: yellow;
+
+}
+
+.linea{
+
+    display: block;
+    margin-left: 15%;
+
+    height: 0.5vh;
+    width: 70%;
+
+    background-color: var(--colortitulo);
+
+    box-shadow: 0px 3px 10px 3px var(--colortitulo);
+
+    float: left;
+
+}
+
+.cuerpo{
+
+    background-color: rgba(255, 255, 255, 1);
+
+    width: 100%;
+
+    display: block;
+
+    overflow: hidden;
+
+}
+
+.cuadro_derecho{
+
+    float: right;
+
+    width: 45%;
+    height: 40vh;
+
+    margin-right: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: right;
+
+    box-shadow: -10px 10px 30px 1px grey;
+
+    user-select: none; 
+	
+	overflow: hidden;
+
+
+}
+
+.cuadro_derecho:hover{
+
+    float: right;
+
+    width: 45%;
+    height: 40vh;
+
+    margin-right: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: right;
+
+    transform: translateY(-20px) skewY(4deg); 
+
+    box-shadow: -20px 30px 30px 1px grey;
+
+}
+
+.cuadro_derecho:active{
+
+    float: right;
+
+    width: calc(45% - 6px);
+    height: calc(40vh - 6px);
+
+    margin-right: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: right;
+
+    transform: translateY(-20px) skewY(4deg); 
+
+    box-shadow: -20px 30px 30px 1px grey;
+
+    border: 3px solid gold;
+
+}
+
+.cuadro_izquierdo{
+
+    float: left;
+
+    width: 45%;
+    height: 40vh;
+
+    margin-left: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: left;
+
+    box-shadow: 10px 10px 30px 1px grey;
+
+    overflow-wrap: break-word;
+
+    user-select: none;
+	
+	overflow: hidden;
+
+
+}
+
+.cuadro_izquierdo:hover{
+
+    float: left;
+
+    width: 45%;
+    height: 40vh;
+
+    margin-left: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: left;
+
+    transform: translateY(-20px) skewY(-4deg); 
+
+    box-shadow: 20px 30px 30px 1px grey;
+
+}
+
+.cuadro_izquierdo:active{
+
+    float: left;
+
+    width: calc(45% - 6px);
+    height: calc(40vh - 6px);
+
+    margin-left: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    background-color: var(--colorfondo_1);
+
+    text-align: left;
+
+    transform: translateY(-20px) skewY(-4deg); 
+
+    box-shadow: 20px 30px 30px 1px grey;
+
+    border: 3px solid gold;
+
+}
+
+.pie_pagina{
+
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../imagenes/fondo\ distorsion\ azul.jpg);
+
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    color: white;
+
+    float: left;
+
+    text-align: center;
+
+}
+
+.logo{
+	
+	height:40vh;
+
+    width:var(--ancho);
+
+}
+
+
+.cuadro_derecho .logo{
+
+    float: left;
+
+}
+
+.cuadro_izquierdo .logo{
+
+    float: right;
+
+}
+
+.subtitulo2{
+
+    display: block;
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+    font-size: 5vw;
+
+    color: black;
+
+}
+
+.cuadro_izquierdo .subtitulo2{
+
+    float: left;
+
+    margin-top: 0%;
+
+}
+
+.cuadro_derecho .subtitulo2{
+
+    float: right;
+
+    margin-top: 0%;
+
+}
+
+.texto_D{
+
+    float: right;
+
+    width: fit-content;
+    height: 100%;
+
+}
+
+.cuadro_izquierdo p{
+
+    float: left;
+    width: 50%;
+    
+}
+
+.cuadro {
+
+    display: block;
+
+    width: 75%;
+    height: 80vh;
+
+    background-color: var(--colorfondo_1);
+
+}
+
+.foto {
+
+    width: 55%;
+    height: 50%;
+
+    margin-left: 1%;
+    margin-top: 1%;
+
+    float: left;
+
+}
+
+.bloque{
+
+    display: block;
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 3vh;
+
+    background-color: black;
+
+}
+
+.carga{
+
+    display: block;
+
+    position: absolute;
+
+    width: calc(var(--carga)/2);
+
+    height: 3vh;
+
+    background-color: yellow;
+
+}

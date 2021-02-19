@@ -1,0 +1,179 @@
+.chat{
+
+    display:block;
+    margin-left: 5%;
+
+    width: 90%;
+    height: 600px;
+
+    background-color: var(--color_fondo_2);
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+    text-align: left;
+
+    font-size: 100%;
+
+}
+
+.dialogos{
+
+    display: block;
+
+    height: 70%;
+
+    width: 90%;
+
+    margin-left: 5%;
+
+    overflow-y: scroll;
+
+    background-color: rgba(175, 59, 211, 0.200);
+
+    border-radius: 10px;
+
+}
+
+.input_text{
+
+    width: 74%;
+    margin-left: 5%;
+    
+    margin-top: 1%;
+
+    height: 50px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    overflow-y: hidden;
+
+    background-color: rgba(94, 140, 231, 0.479);
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+
+}
+
+.input_text:focus{
+
+    width: 74%;
+    margin-left: 5%;
+    
+    margin-top: 1%;
+
+    height: 50px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    overflow-y: hidden;
+
+    background-color: rgba(94, 140, 231, 0.479);
+
+    box-shadow: 5px 0px 25px var(--color_titulo);
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+
+}
+
+.submit{
+
+    display: block;
+
+    box-shadow: 4px 4px #000;
+
+    float: right;
+
+    width: 15%;
+    
+    margin-top: calc(1% - 1px);
+    margin-right: 5%;
+
+    height: 55px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background-color: rgba(36, 72, 143, 0.8);
+
+    font-size: larger;
+
+    color: white;
+
+    text-shadow: 1px 3px 1px var(--color_fondo_1);
+
+
+}
+
+.submit:hover{
+
+    display: block;
+
+    box-shadow: 5px 0px 25px var(--color_titulo);
+
+    float: right;
+
+    width: 15%;
+    
+    margin-top: calc(1% + 2px);
+    margin-right: 5%;
+
+    height: 55px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background-color: rgba(36, 72, 143, 0.8);
+
+    font-size: larger;
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+
+}
+
+.parrafo{
+
+    margin-left: 5%;
+
+    font-size: large;
+
+    color: white;
+
+    text-shadow: 1px 1px 1px var(--color_fondo_1);
+
+}
+
+.comentario{
+
+    display: block;
+    margin: auto;
+
+    width: 70%;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    background-color: rgba(94, 140, 231, 0.479);
+
+
+}
+
+.comentario::first-line{
+
+    color: yellow;
+
+    font-size: 150%;
+
+}

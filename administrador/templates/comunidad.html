@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01 GAMES</title>
+
+        <link rel="stylesheet" href="../static/css/estiloPrincipal.css" />
+
+    </head>
+
+    <body>
+
+        <a href="index"><div class="logo"></div></a>
+        
+        <div class="barra">
+
+            <a href="comunidad" class="seccion"> Comunidad </a>
+            <a href="index" class="seccion"> Noticias </a>
+            <a href="foro" class="seccion"> Foro </a>
+
+        </div>
+
+        <div class="textos">
+
+            <div class="titulo">
+
+                <strong> Comunidad </strong>
+
+            </div>
+
+            {% for c in comunicados %}
+
+                {% if c.nota != "" and c.titulo_nota != "" %}
+
+                    <div class="aviso">
+
+                        <strong>{{c.titulo_nota}}</strong><br />
+                        <p>{{c.nota}}</p>
+
+                    </div>
+
+                {% endif %}
+
+                <div class="posteo">
+
+                    <p class="subtitulo">
+                        
+                        {{c.titulo}}
+                    
+                    </p>
+
+                    <p style="text-align: center;">
+
+                        {{c.fecha}}
+
+                    </p>
+
+                    <div style="display: block; ">
+
+                        <p>
+
+                            {{c.contenido}}
+            
+                        </p>
+
+                    </div>
+
+                    {% if c.img != "" %}
+                        
+                        <img src = '../static/imagenes/descargado/{{c.img}}' class = 'imagen_central'></img>
+
+                    {% endif %}
+
+                </div>
+
+                <br />
+
+            {% endfor %}
+
+
+
+        </div>
+
+
+    </body>
+
+</html>

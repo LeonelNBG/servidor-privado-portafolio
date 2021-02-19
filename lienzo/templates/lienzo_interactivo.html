@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset = "utf-8" />
+
+        <title>Pizarra</title>
+
+        <link rel="stylesheet" href="../static/css/estilo.css" />
+
+        <style>
+
+            center{
+
+                font-family: Arial
+
+            }
+
+            canvas{
+
+                border: 2px solid black;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body id="cuerpo">
+
+        <div class="Menu_izquierda">
+
+            <b>Seleccione un color del RGB </b>
+
+            <br>
+
+            ROJO---
+
+            <input type="range" min="0" max="255" step="1" id="rango_R" class="rango">
+            </input>
+
+            VERDE-
+
+            <input type="range" min="0" max="255" step="1" id="rango_G" class="rango">
+            </input>
+
+            <br />
+
+            AZUL---
+
+            <input type="range" min="0" max="255" step="1" id="rango_B" class="rango">
+            </input>
+
+            <canvas height="40px" id="muestraColor" class="muestra"></canvas>
+
+        </div>
+
+        <div class="Menu_derecha">
+
+            <b>Seleccione el instrumento</b>
+
+            <br />
+
+            <input type="button" value="Pincel/Lapíz básico" id="btn_lapiz" class="boton">
+            </input>
+
+            <input type="button" value="Borrador  ( blanco )." id="btn_borrador" class="boton">
+            </input>
+
+            <input type="button" value="Rellenar hasta orilla" id="btn_rellenar" class="boton">
+            </input>
+
+            <br />
+
+            <b>Tamaño: </b>
+
+            <input type="range" min="1" max="30" step="1" id="rango_grueso" class="rango">
+            </input>
+
+            <span id="etiqueta"> </span>
+
+            <input type="button" value="Limpiar el lienzo" id="btn_limpiar" class="boton" />
+
+        </div>
+
+
+        <div class="Menu">
+
+            <div class="text">Menú.</div>
+
+        </div>
+
+        <div class="encabezado">
+
+            <h2>Dibujo</h2>
+
+            <p>Presiona encima de <br />cualquier lugar para dibujar</p>
+
+        </div>
+
+        <canvas id="espacioDibujable" class="lienzo">
+        </canvas>
+
+        <br />
+
+        <span id="Indicador"></span>
+
+        <br /><br />
+
+        <input type="button" value="Descargar" id="btn_Descarga" class="botonDescarga" />
+
+
+        <span id="movimiento"></span>
+
+        <span id="mouse"></span>
+
+        <script src="../static/js/rellenar.js"></script>
+
+        <script src="../static/js/eventos.js"></script>
+
+    </body>
+
+</html>
