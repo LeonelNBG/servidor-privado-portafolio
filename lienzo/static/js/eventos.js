@@ -366,7 +366,12 @@ function comenzar(posicion){
 
         if(pixel_inicial[0] != 0 & pixel_inicial[1] != 0 & pixel_inicial[2] != 0 & pixel_inicial[3] != 0){
 
-            rellenar(c, Posicion.Eje_x, Posicion.Eje_y, papel);
+            var posicion_nueva = {
+                Eje_x: ((posicion.clientX) - (screen.width - largo)/2),
+                Eje_y: ((posicion.clientY))
+            };
+
+            rellenar(c, posicion_nueva.Eje_x, posicion_nueva.Eje_y, papel);
 
         }
 

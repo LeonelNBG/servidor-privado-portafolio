@@ -184,7 +184,6 @@ body{
 
     margin-right: 2%;
     margin-top: 4%;
-    margin-bottom: 2%;
 
     background-color: var(--colorfondo_1);
 
@@ -199,20 +198,17 @@ body{
 
 }
 
+.cuadro_derecho p{
+
+    display: flex;
+
+    margin-top: 30px;
+
+    min-width: 60%;
+
+}
+
 .cuadro_derecho:hover{
-
-    float: right;
-
-    width: 45%;
-    height: 40vh;
-
-    margin-right: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
-
-    background-color: var(--colorfondo_1);
-
-    text-align: right;
 
     transform: translateY(-20px) skewY(4deg); 
 
@@ -222,18 +218,7 @@ body{
 
 .cuadro_derecho:active{
 
-    float: right;
-
-    width: calc(45% - 6px);
-    height: calc(40vh - 6px);
-
-    margin-right: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
-
-    background-color: var(--colorfondo_1);
-
-    text-align: right;
+    margin-top: calc(4% - 6px);
 
     transform: translateY(-20px) skewY(4deg); 
 
@@ -252,7 +237,6 @@ body{
 
     margin-left: 2%;
     margin-top: 4%;
-    margin-bottom: 2%;
 
     background-color: var(--colorfondo_1);
 
@@ -266,23 +250,18 @@ body{
 	
 	overflow: hidden;
 
+}
+
+.cuadro_izquierdo p{
+
+    display: flex;
+
+    float: left;
+    width: 65%;
 
 }
 
 .cuadro_izquierdo:hover{
-
-    float: left;
-
-    width: 45%;
-    height: 40vh;
-
-    margin-left: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
-
-    background-color: var(--colorfondo_1);
-
-    text-align: left;
 
     transform: translateY(-20px) skewY(-4deg); 
 
@@ -292,18 +271,7 @@ body{
 
 .cuadro_izquierdo:active{
 
-    float: left;
-
-    width: calc(45% - 6px);
-    height: calc(40vh - 6px);
-
-    margin-left: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
-
-    background-color: var(--colorfondo_1);
-
-    text-align: left;
+    margin-top: calc(4% - 6px);
 
     transform: translateY(-20px) skewY(-4deg); 
 
@@ -335,7 +303,9 @@ body{
 	
 	height:40vh;
 
-    width:var(--ancho);
+    width: 35%;
+
+    min-width: 180px;
 
 }
 
@@ -362,6 +332,8 @@ body{
 
     color: black;
 
+    min-width: 60%;
+
 }
 
 .cuadro_izquierdo .subtitulo2{
@@ -387,13 +359,6 @@ body{
     width: fit-content;
     height: 100%;
 
-}
-
-.cuadro_izquierdo p{
-
-    float: left;
-    width: 50%;
-    
 }
 
 .cuadro {
@@ -444,5 +409,13 @@ body{
     height: 3vh;
 
     background-color: yellow;
+
+}
+
+.tarjetas{
+
+    display: inline-block;
+
+    margin-bottom: 10%;
 
 }
