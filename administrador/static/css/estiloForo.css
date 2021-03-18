@@ -177,3 +177,17 @@
     font-size: 150%;
 
 }
+
+@media(max-width: 600px){
+	
+	.submit{
+		
+		width: 10%;
+		font-size: 30px;
+		word-wrap: break-word;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		
+	}
+	
+}
