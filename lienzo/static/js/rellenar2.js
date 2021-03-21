@@ -203,46 +203,145 @@ function rellenar(color, Eje_x, Eje_y, papel){
         }
 
     }
+
+    //EXPERIMENTAL
+
+    var h = 0;
+
+    var k = 0;
+
+    var operar = true;
+    var operarArriba = true;
+    var operarAbajo = true;
     
-    /*
-
     while(operar){
+    
+        while(operarArriba){
+    
+            k += -1;
+    
+            ca = actualizarColor(h, (k - 1));
+    
+            if(ca != ci){
+    
+                operarArriba = false;
+                operarAbajo = true;
 
-        pared = 0;
-
-        console.log(patron[paso%4], patron[paso%4+1]);
-
-        ca = actualizarColor((h + patron[paso%4]), (k + (patronY[paso%4 + 1])));
-
-        if(ca == ci){
-
-            h += patron[paso%4];
-            k += (patronY[paso%4 + 1]);
-
-            Linea(color, 1, Eje_x+h, Eje_y+k, Eje_x+h+1, Eje_y+k, papel);
-
+                h += -1;
+                k += 1;
+    
+            }
+            else{
+    
+                Linea(color, 2, Eje_x+h, Eje_y+k, Eje_x+h+0.5, Eje_y+k, papel);
+                Linea(color, 2, Eje_x+h, Eje_y+k, Eje_x+h+0.5, Eje_y+k, papel);
+    
+            }
+    
+    
         }
 
-        else{
+        while(operarAbajo){
 
-            multiplicador++; //Tratar de incrementar el largo del paso cuando entra en un cierre
+            Linea(color, 2, Eje_x+h, Eje_y+k, Eje_x+h+0.5, Eje_y+k, papel);
+            Linea(color, 2, Eje_x+h, Eje_y+k, Eje_x+h+0.5, Eje_y+k, papel);
+    
+            k += 1;
+    
+            ca = actualizarColor(h, k);
+    
+            if(ca != ci){
+    
+                operarAbajo = false;
+                operarArriba = true;
 
+                h += -1;
+                k += -1;
+
+            }
+    
+    
         }
 
-        if (ciclo == 3000){
+        ca = actualizarColor(h, k);
+
+        if(ca != ci){
 
             operar = false;
 
         }
 
-        ciclo++;
+    }
 
-        console.log("h:", h, " k:", k, " paso:", paso, " pared:", pared);
+    var operar = true;
+    var operarArriba = true;
+    var operarAbajo = true;
 
-        paso++;
+    k += 2;
+
+    ca = actualizarColor(h, k);
+
+    if(ca != ci){
+
+        k += -4;
 
     }
 
-    */
+    while(operar){
+
+        while(operarAbajo){
+
+            Linea(color, 1, Eje_x+h, Eje_y+k, Eje_x+h+1, Eje_y+k, papel);
+    
+            h += -1;
+    
+            ca = actualizarColor(h, k);
+    
+            if(ca != ci){
+    
+                operarAbajo = false;
+                operarArriba = true;
+
+                k += 1;
+                h += 2;
+
+            }
+    
+    
+        }
+    
+        while(operarArriba){
+    
+            h += 1;
+    
+            ca = actualizarColor((h - 1), k);
+    
+            if(ca != ci){
+    
+                operarArriba = false;
+                operarAbajo = true;
+
+                k += 1;
+                h += -2;
+    
+            }
+            else{
+    
+                Linea(color, 1, Eje_x+h, Eje_y+k, Eje_x+h+1, Eje_y+k, papel);
+    
+            }
+    
+    
+        }
+
+        ca = actualizarColor(h, k);
+
+        if(ca != ci){
+
+            operar = false;
+
+        }
+
+    }
 
 }

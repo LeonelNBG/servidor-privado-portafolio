@@ -130,7 +130,7 @@ function cambiar_color() {
 
     };
 
-    console.log(RGB);
+    //console.log(RGB);
 
     //Se compone el color final sumando los STRING
 
@@ -179,8 +179,8 @@ function cambiar_color() {
     muestra.fillStyle = cNot;
     muestra.fillText(c, (cuadrito.width/3), (cuadrito.height - 2));
 
-    console.log("No color: " + cNot);
-    console.log("color: " +  c);
+    //console.log("No color: " + cNot);
+    //console.log("color: " +  c);
 
     return c;
 
@@ -253,15 +253,15 @@ function terminar(){
 
     estadoEsquina = false;
 
-    console.log(papel.getImageData(0, 0, cuadrote.width, cuadrote.height).data);
+    //console.log(papel.getImageData(0, 0, cuadrote.width, cuadrote.height).data);
 
     if(guardado != papel.getImageData(0, 0, cuadrote.width, cuadrote.height).data){
     
         guardado = papel.getImageData(0, 0, cuadrote.width, cuadrote.height).data;
 
-        console.log("GUARDADO!!!");
+        //console.log("GUARDADO!!!");
 
-        console.log(guardado);
+        //console.log(guardado);
  
     }
 }
@@ -275,9 +275,9 @@ function comenzar(posicion){
         Eje_y: ((posicion.clientY)-103)
     };  
 
-    console.log(Posicion);
+    //console.log(Posicion);
 
-    console.log("L: " + largo + " A: " + alto);
+    //console.log("L: " + largo + " A: " + alto);
 
     var estilo = getComputedStyle(document.body);
 
@@ -316,7 +316,7 @@ function comenzar(posicion){
     }
 
     var modulo = Math.sqrt( Math.pow((parseInt(menuX) - Posicion.Eje_x + 50), 2) + Math.pow((parseInt(menuY) - Posicion.Eje_y - 50), 2) );
-    console.log(modulo);
+    //console.log(modulo);
 
     estadoEsquina = false;
     inicioMenu = false;
@@ -364,7 +364,7 @@ function comenzar(posicion){
 
         var pixel_inicial = papel.getImageData(Posicion.Eje_x, Posicion.Eje_y, 1, 1).data;
 
-        if(pixel_inicial[0] != 0 & pixel_inicial[1] != 0 & pixel_inicial[2] != 0 & pixel_inicial[3] != 0){
+        if(pixel_inicial[0] != 0 & pixel_inicial[1] != 0 & pixel_inicial[2] != 0 & pixel_inicial[3] != 0 & ((parseInt(menuX) - parseInt(ancho) > Posicion.Eje_x) || (parseInt(menuX) + parseInt(ancho) < Posicion.Eje_x) || (parseInt(menuY) < Posicion.Eje_y) || (parseInt(menuY) - 100 > Posicion.Eje_y))){
 
             var posicion_nueva = {
                 Eje_x: ((posicion.clientX) - (screen.width - largo)/2),
@@ -382,7 +382,6 @@ function comenzar(posicion){
 document.addEventListener("mousemove", marcar);
         
 function marcar(posicion){
-
     
     var Posicion_intermedia = {
         Eje_x: ((posicion.clientX)),
@@ -425,10 +424,10 @@ function marcar(posicion){
 
     }
 
-    console.log("X:" + menuX);
-    console.log("Y:" + menuY);
-    console.log("X2:" + Posicion_intermedia.Eje_x);
-    console.log("Y2:" + Posicion_intermedia.Eje_y);
+    //console.log("X:" + menuX);
+    //console.log("Y:" + menuY);
+    //console.log("X2:" + Posicion_intermedia.Eje_x);
+    //console.log("Y2:" + Posicion_intermedia.Eje_y);
 
     let root = document.documentElement;
 
@@ -438,7 +437,7 @@ function marcar(posicion){
 
 
     var modulo = Math.sqrt( Math.pow((parseInt(menuX) - Posicion_intermedia.Eje_x + 50), 2) + Math.pow((parseInt(menuY) - Posicion_intermedia.Eje_y - 50), 2) );
-    console.log(modulo);
+    //console.log(modulo);
 
     if (clicking){
 
@@ -491,7 +490,7 @@ function marcar(posicion){
                             Eje_y: ((posicion.clientY))
                         };
 
-                        console.log(posicion_nueva.Eje_x, posicion.clientX, screen.width, w);
+                        //console.log(posicion_nueva.Eje_x, posicion.clientX, screen.width, w);
 
                         Linea(c, thick, (Eje_x_viejo), (Eje_y_viejo), (posicion_nueva.Eje_x), (posicion_nueva.Eje_y), papel);   
 
