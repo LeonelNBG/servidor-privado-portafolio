@@ -32,6 +32,7 @@
 
             </div>
 
+            {% load static %}
             {% for v in datos %}
 
                 {% if v.nota != "" and v.titulo_nota != "" %}
@@ -63,7 +64,7 @@
 
                         {% if v.img != "" %}
                         
-                            <img src = '../static/imagenes/descargado/{{v.img}}' class = 'imagen'></img>
+                            <img src = '{% static "imagenes/descargado/{{v.img}}" %}' class = 'imagen'></img>
 
                         {% endif %}
 
