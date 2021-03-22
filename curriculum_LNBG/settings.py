@@ -128,6 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'administrador/static/'),
+    os.path.join(BASE_DIR, 'administrador/static/descargado'),
     os.path.join(BASE_DIR, 'indice/static/'),
     os.path.join(BASE_DIR, 'lienzo/static/'),
 )
@@ -135,6 +136,7 @@ STATICFILES_DIRS = (
 STATIC_DIRS = {
 
     os.path.join(BASE_DIR, 'administrador/static/'),
+    os.path.join(BASE_DIR, 'administrador/static/descargado'),
     os.path.join(BASE_DIR, 'indice/static/'),
     os.path.join(BASE_DIR, 'lienzo/static/'),
 }
