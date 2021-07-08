@@ -14,7 +14,7 @@ class posteo(models.Model):
 
     contenido = models.CharField("contenido del post", max_length=4000)
 
-    img = models.ImageField("Imagen opcional", upload_to="", blank=True)
+    img = models.CharField("Url de la imagen", max_length=400, blank=True)
 
     titulo_nota = models.CharField("Titulo para la nota (opcional, aparecerá al lado del post)", max_length=30, blank=True)
 
@@ -42,7 +42,7 @@ class comunicado(models.Model):
 
     contenido = models.CharField("contenido del comunicado", max_length=4000)
 
-    img = models.ImageField("Imagen opcional", upload_to="", blank=True)
+    img = models.CharField("Url de la imagen", max_length=400, blank=True)
 
     titulo_nota = models.CharField("Titulo para la nota (opcional, aparecerá al lado del comunicado)", max_length=30, blank=True)
 
